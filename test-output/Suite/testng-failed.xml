@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.wipro.opencartTestCase.TC2">
+        <methods>
+          <include name="Intial"/>
+          <include name="searchtest" invocation-numbers="0"/>
+          <include name="logincred"/>
+        </methods>
+      </class> <!-- com.wipro.opencartTestCase.TC2 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

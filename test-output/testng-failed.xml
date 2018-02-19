@@ -3,13 +3,13 @@
 <suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.wipro.opencartTestCase.TC1">
+      <class name="com.wipro.opencartTestCase.TC2">
         <methods>
           <include name="Intial"/>
-          <include name="Launchbrowser" invocation-numbers="1"/>
-          <include name="ratingsteps" invocation-numbers="2"/>
+          <include name="searchtest" invocation-numbers="0"/>
+          <include name="logincred"/>
         </methods>
-      </class> <!-- com.wipro.opencartTestCase.TC1 -->
+      </class> <!-- com.wipro.opencartTestCase.TC2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

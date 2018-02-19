@@ -19,7 +19,7 @@ public class ExcelData {
 	public static Object[][] reviewdata(String SheetName) throws Exception
 	{
 	// TODO Auto-generated method stub
-	File fil = new File("C://Users//BH395801//Desktop//Doc//SeleniumOpen//RegestrationDetails1.xlsx");
+	File fil = new File("D://testdata.xlsx");
 	FileInputStream fis = new FileInputStream(fil);
 	XSSFWorkbook wb = new XSSFWorkbook(fis);
 	XSSFSheet sh = wb.getSheet(SheetName);

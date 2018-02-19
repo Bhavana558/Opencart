@@ -61,7 +61,7 @@ public class TC1{
   @DataProvider(name="RegistrationData")
   public static Object[][] ExcelData1() throws Exception
   {
-	   Object[][] obj1=ExcelData.reviewdata("Registration");
+	   Object[][] obj1=ExcelData.reviewdata("Regdata");
 	return obj1;
 	  
   }
@@ -69,7 +69,7 @@ public class TC1{
   @DataProvider(name="ReviewData")
   public static Object[][] ExcelData2() throws Exception
   {
-	   Object[][] obj1=ExcelData.reviewdata("Review");
+	   Object[][] obj1=ExcelData.reviewdata("Reviewdata");
 	return obj1;
 }
    
