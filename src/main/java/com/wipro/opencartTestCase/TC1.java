@@ -6,6 +6,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.net.BindException;
+import java.net.URL;
 import java.sql.BatchUpdateException;
 import java.util.Properties;
 import java.util.Scanner;
@@ -17,41 +18,64 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.apache.xmlbeans.impl.xb.xsdschema.Public;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-public class TC1{
+public class TC1   {
 	WebDriver driver;
 	Properties pro;
 	String Name;
 	String emailc;
 	XSSFSheet sheet;
 	XSSFWorkbook workbook;
+	//Properties Bro;
+	 
+      DesiredCapabilities capabilities;
 	
-	
-	
+      String url="http://10.159.34.58:4444/wd/hub";
+      Browser_Grid BRG=new Browser_Grid();
 @BeforeClass
   public void Intial() throws IOException 
   {
-  System.setProperty("webdriver.chrome.driver","D://Selenium Jars//chromedriver.exe");
-  driver = new ChromeDriver();
+ /* System.setProperty("webdriver.chrome.driver","D://Selenium Jars//chromedriver.exe");
+  driver = new ChromeDriver();*/
+    
+
+        try {
+             capabilities = new DesiredCapabilities();
+            capabilities.setBrowserName("chrome");
+            capabilities.setPlatform(Platform.WINDOWS);
+            driver=new RemoteWebDriver(new URL(url),capabilities);
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+	
+	    
+	
   File file = new File(System.getProperty("user.dir")+"/src/main/java/Objrepo.properties");	
   FileInputStream fis = new FileInputStream(file);
   pro = new Properties();
   pro.load(fis);
-  }
+}
   @Test(priority=1)
   public void opencart() throws IOException
   {
 	  
-	    driver.get(pro.getProperty("Opencart.URL"));
+	  
+	  //  driver.get(pro.getProperty("Opencart.URL"));
+	    
+	    driver.get("http://10.207.182.108:81/opencart/");
 	    driver.findElement(By.xpath(pro.getProperty("CAccount"))).click();
 	    driver.manage().window().maximize();		
   }

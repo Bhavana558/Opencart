@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.wipro.opencartTestCase.TC1"/>
-     <!--  <class name="com.wipro.opencartTestCase.TC2"/> -->
+     <class name="com.wipro.opencartTestCase.TC1"/>
+    <class name="com.wipro.opencartTestCase.TC2"/> 
+   <!--  <class name="com.wipro.opencartTestCase.TC3"/>  -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -81,7 +81,7 @@ import org.testng.annotations.Test;
 	  	 System.out.println(Actual);
 	  	 
 	
-	  	String countFile = "D:\\count.txt";
+	  	String countFile = "D:\\Data\\count.txt";
 	  	File CF = new File(countFile);
 	  	CF.createNewFile();
 	  	FileWriter FW = new FileWriter(countFile);
